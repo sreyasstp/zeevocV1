@@ -1,0 +1,25 @@
+{
+  "name": "code416",
+  "version": "1.0.0",
+  "description": "This is a game changing project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "react-scripts build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "latest",
+    "body-parser": "latest",
+    "cors": "latest",
+    "express": "latest",
+    "express-graphql": "latest",
+    "graphql": "latest",
+    "jsonwebtoken": "latest",
+    "mongoose": "latest",
+    "nodemon": "latest",
+    "react-scripts": "latest"
+  }
+}
