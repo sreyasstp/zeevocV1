@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FiCast, FiLayers, FiUsers, FiMonitor } from "react-icons/fi";
+import {
+    FiCode,
+    FiBox,
+    FiShoppingCart,
+    FiBookOpen,
+    FiSettings,
+    FiGlobe
+} from "react-icons/fi";
 import { getAllServices } from "../../api";
 
 const ServiceTwo = () => {
@@ -46,11 +53,13 @@ const ServiceTwo = () => {
                                 <div className="col-lg-6 col-md-6 col-sm-6 col-12" key={index}>
                                     <a href="/service-details">
                                         <div className="service service__style--2">
-                                        <div className="icon">
-                                                {index === 0 && <FiCast />}
-                                                {index === 1 && <FiLayers />}
-                                                {index === 2 && <FiUsers />}
-                                                {index === 3 && <FiMonitor />}
+                                            <div className="icon">
+                                            {index === 0 && <FiCode />}
+                                            {index === 1 && <FiBox />}
+                                            {index === 2 && <FiShoppingCart />}
+                                            {index === 3 && <FiBookOpen />}
+                                            {index === 4 && <FiSettings />}
+                                            {index === 5 && <FiGlobe />}
                                             </div>
                                             <div className="content">
                                                 <h3 className="title">{service.title}</h3>
