@@ -61,8 +61,8 @@ class Contact extends Component {
                                     </div>
                                     <div className="inner">
                                         <h4 className="title">Contact With Phone Number</h4>
-                                        <p><a href="tel:+057 254 365 456">+91 7403563990</a></p>
-                                        <p><a href="tel:+856 325 652 984">+91 9746080576</a></p>
+                                        <p><a href="tel:+91 7403563990">+91 7403563990</a></p>
+                                        {/* <p><a href="tel:+91 9746080576">+91 9746080576</a></p> */}
                                     </div>
                                 </div>
                             </div>
@@ -76,8 +76,8 @@ class Contact extends Component {
                                     </div>
                                     <div className="inner">
                                         <h4 className="title">Email Address</h4>
-                                        <p><a href="mailto:sreyastp444@gmail.com">sreyastp444@gmail.com</a></p>
-                                        <p><a href="mailto:iitsreyas@gmail.com">iitsreyas@gmail.com</a></p>
+                                        <p><a href="mailto:zeevocdigital@gmail.com">zeevocdigital@gmail.com</a></p>
+                                        <p><a href="mailto:zeevocenterprise@gmail.com">zeevocenterprise@gmail.com</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@ class Contact extends Component {
                                     </div>
                                     <div className="inner">
                                         <h4 className="title">Location</h4>
-                                        <p>Moolepadam Rd, Kairali Nagar, Kalamassery, Ernakulam, Kerala</p>
+                                        <p>Thachangad Panikath Rd, Palakkad, Kerala, India</p>
                                     </div>
 
                                 </div>
@@ -115,7 +115,7 @@ class Contact extends Component {
                         <GoogleMapReact
                             defaultCenter={this.props.center}
                             defaultZoom={this.props.zoom}
-                            bootstrapURLKeys={{ key: "" }} // Add your API key here
+                            bootstrapURLKeys={{ key: "" }}
                         >
                             <AnyReactComponent
                                 lat={10.052131027349821}
