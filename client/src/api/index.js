@@ -18,6 +18,7 @@ export const getUserDetails = () => API.get("user/get-user");
 // Blog APIs
 export const createBlogPost = (data) => API.post("/blog/create", data);
 export const getAllBlogPosts = async () => {
+  console.log("use local true")
   if (USE_LOCAL) return { data: blogsData };
   return API.get("/blog/all");
 };
