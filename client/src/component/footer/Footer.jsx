@@ -67,9 +67,12 @@ class Footer extends Component {
 
                                         <div className="col-lg-12">
                                             <div className="copyright-text">
-                                                <p>Copyright © 2024 Zeevoc Digital. All Rights Reserved.</p>
+                                                <p>
+                                                    Copyright © {new Date().getFullYear()} Zeevoc Digital. All Rights Reserved.
+                                                </p>
                                             </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

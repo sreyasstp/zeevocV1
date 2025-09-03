@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { FiChevronUp, FiShoppingBag, FiShoppingCart, FiBookOpen, FiSettings, FiMonitor, FiCode } from "react-icons/fi";
+import {
+    FiCode,
+    FiBox,
+    FiShoppingCart,
+    FiBookOpen,
+    FiSettings,
+    FiGlobe
+} from "react-icons/fi";
 import LoadingSpinner from "../../component/spinner/LoadingSpinner";
 
 import { getAllServices } from "../../api";
@@ -40,8 +47,8 @@ const ServiceTwo = () => {
                 </div>
                 <div className="col-lg-8 col-12 mt_md--50">
                     <div className="row service-one-wrapper">
-                        {loading? (
-                           <LoadingSpinner/>
+                        {loading ? (
+                            <LoadingSpinner />
                         ) : (
                             services.slice(0, 4).map((service, index) => (
                                 <div className="col-lg-6 col-md-6 col-sm-6 col-12" key={index}>
@@ -49,10 +56,12 @@ const ServiceTwo = () => {
                                     <a>
                                         <div className="service service__style--2">
                                             <div className="icon">
-                                                {index === 0 && <FiShoppingBag />} {/* Magento Development */}
-                                                {index === 1 && <FiCode />} {/* Extension Development */}
-                                                {index === 2 && <FiShoppingCart />} {/* E-commerce Solutions */}
-                                                {index === 3 && <FiBookOpen />} {/* Academic Project Assistance */}
+                                                {index === 0 && <FiCode />}
+                                                {index === 1 && <FiBox />}
+                                                {index === 2 && <FiShoppingCart />}
+                                                {index === 3 && <FiBookOpen />}
+                                                {index === 4 && <FiSettings />}
+                                                {index === 5 && <FiGlobe />}
                                             </div>
                                             <div className="content">
                                                 <h3 className="title">{service.title}</h3>
