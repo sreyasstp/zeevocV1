@@ -33,7 +33,7 @@ const Contact = () => {
                                     <div className="inner">
                                         <h4 className="title">Contact With Phone Number</h4>
                                         <p><a href="tel:+057 254 365 456">+91 7403563990</a></p>
-                                        <p><a href="tel:+856 325 652 984">+91 9746080576</a></p>
+                                        {/* <p><a href="tel:+856 325 652 984">+91 9746080576</a></p> */}
                                     </div>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@ const Contact = () => {
                                     </div>
                                     <div className="inner">
                                         <h4 className="title">Location</h4>
-                                        <p>Moolepadam Rd, Kairali Nagar, Kalamassery, Ernakulam, Kerala</p>
+                                        <p>Thachangad Panikath Rd, Palakkad, Kerala</p>
                                     </div>
                                 </div>
                             </div>

@@ -1,0 +1,66 @@
+[
+	{
+		"_id": "6640539fd2d65fef7ec61a18",
+		"image": "01",
+		"category": "Magento 2",
+		"title": "One Click Products Import Export",
+		"bigImage": "/assets/images/portfolio/big/dp-big--portfolio-09.jpg",
+		"__v": 0,
+		"price": 1,
+		"urlKey": "one-click-import-export",
+		"contentHtml": "<aside class=\"extension-sidebar\">\n    <ul>\n        <li><a href=\"#\">Overview</a></li>\n        <li><a href=\"#\">Technical Specifications</a></li>\n        <li><a href=\"#\">Release Notes</a></li>\n        <li><a href=\"#\">Support</a></li>\n    </ul>\n</aside>\n<div class=\"extension-content\">\n    <h2>Overview</h2>\n    <p><strong>The official extension from Meta.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n    <h2>Tech Specs</h2>\n    <p><strong>The official extension from Meta.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n    <h2>Release Notes</h2>\n    <p><strong>The official extension from Meta.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n    <h2>Support</h2>\n    <p><strong>The official extension from Meta.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n</div>\n",
+		"imageName": "onclickproductimportexport\n"
+	},
+	{
+		"_id": "66405423d2d65fef7ec61a1f",
+		"image": "02",
+		"category": "Magento 2",
+		"title": "Admin Log Viewer",
+		"bigImage": "/assets/images/portfolio/big/dp-big--portfolio-02.jpg",
+		"__v": 0,
+		"price": 25,
+		"urlKey": "magento-2-log-viewer",
+		"contentHtml": "<aside class=\"extension-sidebar\">\n    <ul>\n        <li><a href=\"#\">Overview</a></li>\n        <li><a href=\"#\">Technical Specifications</a></li>\n        <li><a href=\"#\">Release Notes</a></li>\n        <li><a href=\"#\">Support</a></li>\n    </ul>\n</aside>\n<div class=\"extension-content\">\n    <h2>Overview</h2>\n    <p><strong>The official extension from Zeevoc.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n    <h2>Tech Specs</h2>\n    <p><strong>The official extension from Xeevoc.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n    <h2>Release Notes</h2>\n    <p><strong>The official extension from Zeeoc Digital.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n    <h2>Support</h2>\n    <p><strong>The official extension from Meta.</strong> Seamlessly manage your Facebook & Instagram presence from one place.</p>\n    <p>Meta builds technologies that help people connect, find communities and grow businesses. The Facebook & Instagram Extension enables users to set up Conversions API, Pixel, Catalog, and enables Adobe Commerce (on-prem) and Magento Open Source users to create and manage a checkout-enabled Shop on Facebook & Instagram.</p>\n</div>\n",
+		"imageName": "logviewer"
+	},
+	{
+		"_id": "6640544dd2d65fef7ec61a27",
+		"image": "05",
+		"category": "Magento 2",
+		"title": "Location Search",
+		"bigImage": "/assets/images/portfolio/big/dp-big--portfolio-05.jpg",
+		"__v": 0,
+		"price": 50,
+		"urlKey": "magento-2-location-search"
+	},
+	{
+		"_id": "66405454d2d65fef7ec61a29",
+		"image": "06",
+		"category": "Magento 2",
+		"title": "One Click CMS Import Export",
+		"bigImage": "/assets/images/portfolio/big/dp-big--portfolio-06.jpg",
+		"__v": 0,
+		"price": 49,
+		"urlKey": "magento-2-one-click-cms-import-export"
+	},
+	{
+		"_id": "6640545cd2d65fef7ec61a2b",
+		"image": "07",
+		"category": "Magento 2",
+		"title": "Dynamic Category",
+		"bigImage": "/assets/images/portfolio/big/dp-big--portfolio-07.jpg",
+		"__v": 0,
+		"price": 30,
+		"urlKey": "magento-2-dynamic-category"
+	},
+	{
+		"_id": "66405464d2d65fef7ec61a2d",
+		"image": "08",
+		"category": "Magento 2",
+		"title": "Delete Orders",
+		"bigImage": "/assets/images/portfolio/big/dp-big--portfolio-08.jpg",
+		"__v": 0,
+		"price": 49,
+		"urlKey": "magento-2-delete-orders"
+	}
+]

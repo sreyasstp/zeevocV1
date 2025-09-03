@@ -1,4 +1,10 @@
 import API from './apiClient';
+import blogsData from './blogs.json';
+import servicesData from './services.json';
+import extensionsData from './extensions.json';
+
+// Toggle this flag to switch between API and local JSON
+const USE_LOCAL = true;
 
 export const signUp = (formData) => API.post("/user/signup", formData);
 export const signIn = (formData) => API.post("/user/signin", formData);
@@ -11,7 +17,10 @@ export const getUserDetails = () => API.get("user/get-user");
 
 // Blog APIs
 export const createBlogPost = (data) => API.post("/blog/create", data);
-export const getAllBlogPosts = () => API.get("/blog/all");
+export const getAllBlogPosts = async () => {
+  if (USE_LOCAL) return { data: blogsData };
+  return API.get("/blog/all");
+};
 export const getBlogPostById = (id) => API.get(`/blog/getbyid/${id}`);
 export const getBlogByUrlKey = (urlKey) => API.get(`/blog/${urlKey}`);
 export const updateBlogPost = (id, data) => API.patch(`/blog/updatebyid/${id}`, data);
@@ -19,7 +28,10 @@ export const deleteBlogPost = (id) => API.delete(`/blog/deletebyid/${id}`);
 
 // Extension APIs
 export const createExtension = (data) => API.post("/extension/create", data);
-export const getAllExtensions = () => API.get("/extension/all");
+export const getAllExtensions = async () => {
+  if (USE_LOCAL) return { data: extensionsData };
+  return API.get("/extension/all");
+};
 export const getExtensionById = (id) => API.get(`/extension/getbyid/${id}`);
 export const getExtensionByUrlKey = (urlKey) => API.get(`/extension/${urlKey}`);
 export const updateExtension = (id, data) => API.patch(`/extension/${id}`, data);
@@ -39,7 +51,10 @@ export const postPaymentSuccess = (orderData) => API.post(`/payment/success`, or
 
 // Service APIs
 export const createService = (data) => API.post("/service/create", data);
-export const getAllServices = () => API.get("/service/all");
+export const getAllServices = async () => {
+  if (USE_LOCAL) return { data: servicesData };
+  return API.get("/service/all");
+};
 export const getServiceById = (id) => API.get(`/service/getbyid/${id}`);
 export const getServiceByUrlKey = (urlKey) => API.get(`/service/${urlKey}`);
 export const updateService = (id, data) => API.patch(`/service/updatebyid/${id}`, data);
