@@ -1,132 +1,81 @@
-// React Required
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-
-// Create Import File
+import React from 'react';
+import { createRoot } from 'react-dom/client';
 import './index.scss';
-
 import PageScrollTop from './component/PageScrollTop';
-
-// Home layout
-import Demo from './page-demo/Demo';
-import MainDemo from './home/MainDemo';
-import Startup from './home/Startup';
-import Paralax from './home/Paralax';
-import HomePortfolio from './home/HomePortfolio';
-import DigitalAgency from './home/DigitalAgency';
-import CreativeAgency from './home/CreativeAgency';
-import PersonalPortfolio from './home/PersonalPortfolio';
-import Business from './home/Business';
-import StudioAgency from './home/StudioAgency';
-import PortfolioLanding from './home/PortfolioLanding';
-import CreativeLanding from './home/CreativeLanding';
-import HomeParticles from './home/HomeParticles';
-import CreativePortfolio from './home/CreativePortfolio';
-import DesignerPortfolio from './home/DesignerPortfolio';
-import InteriorLanding from './home/Interior';
-import CorporateBusiness from './home/CorporateBusiness';
-import InteractiveAgency from './home/InteractiveAgency';
-
-// Dark Home Layout 
-import DarkMainDemo from './dark/MainDemo';
-import DarkPortfolioLanding from './dark/PortfolioLanding';
-
-// Element Layout
-import Service from "./elements/Service";
-import ServiceDetails from "./elements/ServiceDetails";
-import About from "./elements/About";
-import Contact from "./elements/Contact";
-import PortfolioDetails from "./elements/PortfolioDetails";
-import Blog from "./elements/Blog";
-import BlogDetails from "./elements/BlogDetails";
+import DarkMainDemo from './home/Home';
+import Service from "./elements/service/Service";
+import ServiceDetails from "./elements/service/ServiceDetails";
+import About from "./elements/about/About";
+import Contact from "./elements/contact/Contact";
+import PortfolioDetails from "./elements/portfolio/PortfolioDetails";
+import ExtensionDetails from './elements/extension/ExtensionDetails';
+import Blog from "./elements/blog/Blog";
+import BlogDetails from "./elements/blog/BlogDetails";
 import error404 from "./elements/error404";
-
-
-// Blocks Layout
-
 import Team from "./blocks/Team";
-import Counters from "./blocks/Counters";
-import Testimonial from "./blocks/Testimonial";
-import Portfolio from "./blocks/Portfolio";
+import Admin from "./elements/admin/Admin";
 import Products from "./blocks/Products";
-import VideoPopup from "./blocks/VideoPopup";
-import Gallery from "./blocks/Gallery";
-import Brand from "./blocks/Brand";
-import ProgressBar from "./blocks/ProgressBar";
-import ContactForm from "./blocks/ContactForm";
-import GoogleMap from "./blocks/GoogleMap";
-import Columns from "./blocks/Columns";
-import PricingTable from "./blocks/PricingTable";
-import { BrowserRouter, Switch, Route  } from 'react-router-dom';
+import Orders from './elements/order/Orders';
+import UserProfile from './elements/profile/Profile';
+import Extension from "./blocks/Extensions";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import Login from './elements/Login';
-import SignUp from './elements/SignUp';
+import Login from './elements/login/Login';
+import SignUp from './elements/signup/SignUp';
+import { ThemeProvider } from './context/ThemeContext';
+import { ToastContainer } from 'react-toastify';
+import ForgotPassword from './elements/forgot-password/ForgotPassword';
+import ResetPassword from './elements/reset-password/ResetPassword';
+import { GoogleOAuthProvider } from '@react-oauth/google';
+import dotenv from 'dotenv';
+import PrivacyPolicy from './elements/privacy-policy/PrivacyPolicy';
+import TermsAndConditions from './elements/terms-conditions/TermsConditions';
+import RefundsPolicy from './elements/refund-policy/RefundPolicy';
+import Gallery from './elements/gallery/Gallery';
+dotenv.config();
 
-class Root extends Component{
-    render(){
-        return(
-            <BrowserRouter basename={'/'}>
-                <PageScrollTop>
-                    <Switch>
-                        <Route exact path={`${process.env.PUBLIC_URL}/`} component={DarkMainDemo}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/paralax`} component={Paralax}/>
+const Root = () => {
+  return (
+    <ThemeProvider>
+      <GoogleOAuthProvider clientId="168821784143-d0q7nugflesop4nh6rbdp3f95sr6o9c8.apps.googleusercontent.com">
+        <BrowserRouter basename={'/'}>
+          <PageScrollTop>
+            <Routes>
+              <Route exact path={`${process.env.PUBLIC_URL}/`} element={<DarkMainDemo />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/login`} element={<Login />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/signup`} element={<SignUp />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/forgot-password`} element={<ForgotPassword />} />
+              <Route path="/reset-password/:token" element={<ResetPassword />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/orders`} element={<Orders />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/profile`} element={<UserProfile />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/about`} element={<About />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/contact`} element={<Contact />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/portfolio-details`} element={<PortfolioDetails />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/services`} element={<Service />} />
+              {/* <Route exact path={`${process.env.PUBLIC_URL}/service/:urlKey`} element={<ServiceDetails />} /> */}
+              <Route exact path={`${process.env.PUBLIC_URL}/extensions`} element={<Extension />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/extension/:urlKey`} element={<ExtensionDetails />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/blogs`} element={<Blog />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/blog/:urlKey`} element={<BlogDetails />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/team`} element={<Team />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/gallery`} element={<Gallery />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/privacy-policy`} element={<PrivacyPolicy />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/refund-policy`} element={<RefundsPolicy />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/terms-and-conditions`} element={<TermsAndConditions />} />
+              <Route exact path={`${process.env.PUBLIC_URL}/admin`} element={<Admin />} />
+              <Route path={`${process.env.PUBLIC_URL}/404`} element={<error404 />} />
+              <Route path="*" element={<error404 />} />
+            </Routes>
+          </PageScrollTop>
+          <ToastContainer />
+        </BrowserRouter>
+      </GoogleOAuthProvider>
+    </ThemeProvider>
+  );
+};
 
-                        <Route exact path={`${process.env.PUBLIC_URL}/digital-agency`} component={DigitalAgency}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/creative-agency`} component={CreativeAgency}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/personal-portfolio`} component={PersonalPortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/studio-agency`} component={StudioAgency}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/business`} component={Business}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/portfolio-home`} component={HomePortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/portfolio-landing`} component={PortfolioLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/creative-landing`} component={CreativeLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/home-particles`} component={HomeParticles}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/dark-portfolio-landing`} component={DarkPortfolioLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/designer-portfolio`} component={DesignerPortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/creative-portfolio`} component={CreativePortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/interior-landing`} component={InteriorLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/corporate-business`} component={CorporateBusiness}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/interactive-agency`} component={InteractiveAgency}/>
+const container = document.getElementById('root');
+const root = createRoot(container); // createRoot(container!) if you use TypeScript
+root.render(<Root />);
 
-                        {/* Element Layot */}
-                        <Route exact path={`${process.env.PUBLIC_URL}/service`} component={Service}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/service-details`} component={ServiceDetails}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/contact`} component={Contact}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/login`} component={Login}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/signup`} component={SignUp}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/about`} component={About}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/portfolio-details`} component={PortfolioDetails}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/blog`} component={Blog}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/blog-details`} component={BlogDetails}/>
-
-                        {/* Blocks Elements  */}
-                        <Route exact path={`${process.env.PUBLIC_URL}/team`} component={Team}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/counters`} component={Counters}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/testimonial`} component={Testimonial}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/portfolio`} component={Portfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/products`} component={Products}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/video-popup`} component={VideoPopup}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/gallery`} component={Gallery}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/clint-logo`} component={Brand}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/progressbar`} component={ProgressBar}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/contact-form`} component={ContactForm}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/google-map`} component={GoogleMap}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/columns`} component={Columns}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/pricing-table`} component={PricingTable}/>
-
-
-                        
-                        <Route path={`${process.env.PUBLIC_URL}/404`} component={error404}/>
-                        <Route component={error404}/>
-
-                    </Switch>
-                </PageScrollTop>
-            </BrowserRouter>
-        )
-    }
-}
-
-ReactDOM.render(<Root/>, document.getElementById('root'));
 serviceWorker.register();

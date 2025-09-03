@@ -1,5 +1,5 @@
 import express from "express";
-import auth from "../middleware/auth.js";
+import { adminAuth } from "../middleware/auth.js";
 
 import {
   createService,
@@ -7,15 +7,17 @@ import {
   getServiceById,
   updateService,
   deleteService,
+  getServiceByUrlKey
 } from "../controllers/services.js";
 
 const router = express.Router();
 
-router.post("/create", createService);
+router.post("/create", adminAuth, createService);
 router.get("/all", getAllServices);
 router.get("/getbyid/:id", getServiceById);
-router.patch("/updatebyid/:id", updateService);
-router.delete("/deletebyid/:id", deleteService);
+router.get("/:urlKey", getServiceByUrlKey);
+router.patch("/updatebyid/:id", adminAuth, updateService);
+router.delete("/deletebyid/:id", adminAuth, deleteService);
 
 export default router;
 

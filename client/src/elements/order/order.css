@@ -1,0 +1,134 @@
+.orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.order-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+}
+
+.order-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.order-title {
+    font-size: 16px;
+    margin: 0 0 5px 0;
+    flex: 1;
+    word-wrap: break-word;
+}
+
+.order-date, .order-id {
+    font-size: 12px;
+    margin: 0;
+}
+
+.order-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-left: 2px;
+}
+
+.order-details {
+    border-top: 1px solid #eaeaea;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.order-details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.order-download-button {
+    align-self: flex-end;
+    background-color: #f9004d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.order-download-button:hover {
+    background-color: #ffffff;
+    color: #f9004d;
+    border: 2px solid #f9004d;
+}
+
+@media (min-width: 768px) {
+    .order-details {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+        
+    }
+    
+    .order-details p {
+        margin: 0 10px 0 0;
+        font-size: 14px;
+    }
+    
+    .order-download-button {
+        margin-top: -32px;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .order-card {
+        width: 100%;
+        max-width: none;
+        margin: 10px 0;
+    }
+
+    .order-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-info {
+        margin-bottom: 10px;
+    }
+
+    .order-details {
+        align-items: flex-start;
+    }
+    .order-details p {
+        margin: 0 10px 0 0;
+        font-size: 14px;
+    }
+
+    .order-download-button {
+        margin-top: 7px;
+        width: 100%;
+    }
+}

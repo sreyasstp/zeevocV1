@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FiCast, FiLayers, FiUsers, FiMonitor } from "react-icons/fi";
 import { getAllServices } from "../../api";
+import LoadingSpinner from "../../component/spinner/LoadingSpinner";
 
 const ServiceTwo = () => {
     const [services, setServices] = useState([]);
@@ -11,7 +12,6 @@ const ServiceTwo = () => {
             try {
                 const response = await getAllServices();
                 setServices(response.data);
-                console.log(response);
                 setLoading(false);
             } catch (error) {
                 console.error("Error fetching services:", error);
@@ -40,7 +40,7 @@ const ServiceTwo = () => {
                 <div className="col-lg-8 col-12 mt_md--50">
                     <div className="row service-one-wrapper">
                         {loading ? (
-                            <p>Loading...</p>
+                            <LoadingSpinner/>
                         ) : (
                             services.map((service, index) => (
                                 <div className="col-lg-6 col-md-6 col-sm-6 col-12" key={index}>

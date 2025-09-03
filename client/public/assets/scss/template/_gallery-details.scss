@@ -1,0 +1,202 @@
+/*--------------------------
+    Gallery Styles 
+-----------------------------*/
+
+.rn-gallery-details {
+    .gallery-item {
+        .thumb {
+            position: relative;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .details {
+            padding: 20px 0;
+            text-align: center;
+            .title {
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 14px;
+            }
+            p {
+                font-size: 16px;
+                line-height: 24px;
+                color: rgba(0, 0, 0, 0.8);
+                margin-bottom: 0;
+            }
+        }
+    }
+    .section-heading {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .rn-gallery-details {
+        .gallery-item {
+            .thumb {
+                img {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.rn-page-title-area {
+    padding-top: 120px;
+    padding-bottom: 190px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .rn-page-title {
+        padding-top: 100px;
+        text-align: center;
+        .title {
+            font-size: 40px;
+            line-height: 51px;
+            margin-bottom: 14px;
+        }
+        p {
+            font-size: 24px;
+            line-height: 30px;
+            color: rgba(255, 255, 255, 1);
+            margin-bottom: 0;
+        }
+    }
+}
+
+.backto-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    a {
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: #000;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            background: #333;
+        }
+    }
+}
+
+/* Modal Video Popup */
+.video-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border: 0 none;
+    background: rgba(0, 0, 0, 0.6);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    &:hover {
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+/* Password Modal Styles */
+.password-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+.password-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 1000;
+}
+
+.password-modal-content h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.password-modal-content input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.password-modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: #f81f01;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.password-modal-content button:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .password-modal {
+        padding: 20px;
+    }
+    .password-modal-content h2 {
+        font-size: 20px;
+    }
+    .password-modal-content input {
+        padding: 8px;
+        font-size: 14px;
+    }
+    .password-modal-content button {
+        padding: 8px 16px;
+        font-size: 14px;
+        max-width: 100%;
+    }
+}

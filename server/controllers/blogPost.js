@@ -64,3 +64,37 @@ export const deleteBlogPost = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+export const getBlogByUrlKey = async (req, res) => {
+  try {
+    const blogPost = await BlogPost.findOne({ urlKey: req.params.urlKey });
+    if (!blogPost) {
+      return res.status(404).json({ message: 'Blog post not found' });
+    }
+    res.status(200).json(blogPost);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Create multiple blog posts
+export const createMultipleBlogPosts = async (req, res) => {
+  try {
+    const blogPosts = req.body; // Assuming an array of blog post objects is sent in the request body
+    const savedBlogPosts = await BlogPost.insertMany(blogPosts);
+    res.status(201).json(savedBlogPosts);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+
+
+// Function to delete all blog posts
+export const deleteAllBlogPosts = async (req, res) => {
+  try {
+    await BlogPost.deleteMany({});
+    res.status(204).json({ message: "All blog posts have been deleted" });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};

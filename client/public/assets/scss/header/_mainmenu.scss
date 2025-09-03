@@ -23,11 +23,11 @@ Mainmenu Area
                 > ul {
                     &.submenu {
                         @extend %liststyle;
-                        min-width: 240px;
+                        min-width: 90px;
                         height: auto;
                         position: absolute;
                         top: 100%;
-                        left: 0;
+                        left: -30%;
                         z-index: 90;
                         opacity: 0;
                         visibility: hidden;
@@ -44,6 +44,7 @@ Mainmenu Area
                                 font-weight: 500;
                                 padding: 5px 20px;
                                 font-size: 14px;
+                                min-width: 90px;
                                 display: block;
                                 color: #1f1f25;
                                 margin: 0 10px;
@@ -52,6 +53,8 @@ Mainmenu Area
                             }
                             &:hover {
                                 > a {
+                                min-width: 90px;
+
                                     color: $theme-color;
                                     background: rgba(249, 0, 77, 0.07);
                                 }
@@ -59,7 +62,7 @@ Mainmenu Area
 
                             .submenu {
                                 @extend %liststyle;
-                                min-width: 240px;
+                                min-width: 50px;
                                 height: auto;
                                 position: absolute;
                                 top: 0;
@@ -88,6 +91,7 @@ Mainmenu Area
                 &:hover {
                     > ul {
                         &.submenu {
+                            min-width: 50px;
                             opacity: 1;
                             visibility: visible;
                         }
@@ -96,6 +100,7 @@ Mainmenu Area
 
                 &:hover {
                     > a {
+                        min-width: 50px;
                         color: $theme-color;
                     }
                 }

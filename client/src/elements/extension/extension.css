@@ -1,0 +1,380 @@
+/* extension.css */
+
+.App {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.extension-container {
+    padding: 0px 15px;
+}
+
+.extension-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    /* Add border radius */
+}
+
+.extension-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    /* Add border radius */
+}
+
+.extension-header-content {
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+.extension-header-content h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.extension-header-content span {
+    display: block;
+}
+
+.extension-rating {
+    font-size: 18px;
+}
+
+.extension-main-content {
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    /* Enable wrapping for smaller screens */
+}
+
+.extension-image-gallery {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    /* Add margin bottom for spacing in mobile view */
+}
+
+.extension-main-image {
+    width: 100%;
+    height: 420px;
+    border-radius: 10px;
+    /* Add border radius */
+}
+
+.extension-thumbnails {
+    display: flex;
+    justify-content: center;
+    /* Center align the thumbnails */
+    margin-top: 10px;
+}
+
+.extension-thumbnails img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Add border radius */
+}
+
+.extension-thumbnails img:last-child {
+    margin-right: 0;
+    /* Remove the margin on the last thumbnail */
+}
+
+.extension-thumbnails img.extension-active {
+    border: 2px solid #f9004d;
+}
+
+.extension-details {
+    flex: 0.8;
+    min-width: 300px;
+    /* Ensure minimum width for better display on mobile */
+}
+
+.extension-select-box {
+    margin-bottom: 20px;
+}
+
+.extension-select-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.extension-select-box select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.extension-info-box {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.extension-info-box p {
+    font-size: small;
+}
+
+.extension-price-box {
+    margin-bottom: 20px;
+}
+
+.extension-price-box .extension-price,
+.extension-price-box .extension-total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.extension-contact-vendor {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f9004d;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.extension-contact-vendor:hover {
+    background-color: #ffffff;
+    color: #f9004d;
+    border: 2px solid #f9004d;
+}
+
+.extension-bottom-section {
+    display: flex;
+    padding: 0px;
+    flex-wrap: wrap;
+    /* Enable wrapping for smaller screens */
+}
+
+.extension-main-content,
+.extension-bottom-section {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.extension-sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+    /* Add margin bottom for spacing in mobile view */
+}
+
+.extension-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.extension-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.extension-sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.extension-sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.extension-content {
+    flex: 1;
+}
+
+.extension-content h2 {
+    font-size: 24px;
+    /* Optimize heading size */
+    margin-top: 0;
+    /* Remove the default margin */
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    /* Add a line below the heading */
+}
+
+.extension-content p {
+    font-size: 16px;
+    /* Optimize paragraph text size */
+    line-height: 1.5;
+    /* Add line height for better readability */
+    margin-top: 10px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+/* Media queries for mobile view */
+@media (max-width: 768px) {
+    .extension-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .extension-header-content {
+        padding: 10px 0px;
+    }
+
+    .extension-rating {
+        margin-top: 10px;
+    }
+
+    .extension-main-content {
+        flex-direction: column;
+    }
+
+    .extension-image-gallery {
+        margin-right: 0;
+    }
+
+    .extension-details {
+        margin-top: 20px;
+    }
+
+    .extension-bottom-section {
+        flex-direction: column;
+    }
+
+    .extension-sidebar {
+        width: 100%;
+    }
+
+    .extension-content {
+        margin-top: 20px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+}
+
+.extension-bottom-section {
+    display: flex;
+    padding: 20px 0px;
+    flex-wrap: nowrap;
+    /* Ensure no wrap for larger screens */
+    align-items: flex-start;
+    /* Align items to the top */
+}
+
+.extension-sidebar {
+    position: -webkit-sticky;
+    /* For Safari */
+    position: sticky;
+    top: 20px;
+    /* Distance from the top of the viewport */
+    width: 200px;
+    /* Ensure it maintains the width */
+    margin-right: 20px;
+    border-right: 1px solid #ccc;
+    /* Add a line separator */
+    padding-right: 20px;
+    /* Add padding to the right for spacing */
+}
+
+.extension-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.extension-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.extension-sidebar ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.extension-sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+.extension-content {
+    flex: 1;
+    padding-left: 20px;
+    /* Add padding to the left for spacing */
+}
+
+.extension-content h2 {
+    font-size: 24px;
+    /* Optimize heading size */
+    margin-top: 0;
+    /* Remove the default margin */
+}
+
+.extension-content p {
+    font-size: 16px;
+    /* Optimize paragraph text size */
+    line-height: 1.5;
+    /* Add line height for better readability */
+}
+
+@media (max-width: 768px) {
+    .extension-bottom-section {
+        flex-direction: column;
+    }
+
+    .extension-sidebar {
+        width: 100%;
+        border-right: none;
+        /* Remove the line separator */
+        padding-right: 0;
+        border-bottom: 1px solid #ccc;
+        /* Add bottom border for mobile view */
+        padding-bottom: 20px;
+    }
+
+    .extension-content {
+        padding-left: 0;
+        /* Remove left padding for mobile view */
+        margin-top: 20px;
+        /* Add top margin for spacing */
+    }
+
+}
+
+/* Add styles for navigation buttons */
+.image-navigation {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    font-size: 40px !important;
+    color: #a2a2a2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.nav-button:hover {
+    color: #f9004d;
+}
+
+.nav-button.prev-button {
+    left: -20px;
+}
+
+.nav-button.next-button {
+    right: -20px;
+}
