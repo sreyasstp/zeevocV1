@@ -1,5 +1,26 @@
 [
 	{
+		"_id": "66496780e711a6a97c56e335",
+		"title": "Website Development",
+		"description": "Building impactful websites to boost your online presence.",
+		"__v": 0,
+		"urlKey": "website-development"
+	},
+	{
+		"_id": "66496500e711a6a97c56e32e",
+		"title": "Website Maintenance",
+		"description": "Expert care for your website, ensuring optimal performance and security.",
+		"__v": 0,
+		"urlKey": "website-maintenance"
+	},
+	{
+		"_id": "66362dd2f9c3cf5794a710e2",
+		"title": "E-commerce Solutions",
+		"description": "Providing comprehensive e-commerce solutions to drive online sales.",
+		"__v": 0,
+		"urlKey": "ecommerce-solutions"
+	},
+	{
 		"_id": "66362da1f9c3cf5794a710de",
 		"title": "Magento Development",
 		"description": "Crafting bespoke Magento solutions tailored to your business needs.",
@@ -13,32 +34,12 @@
 		"__v": 0,
 		"urlKey": "extension-development"
 	},
-	{
-		"_id": "66362dd2f9c3cf5794a710e2",
-		"title": "E-commerce Solutions",
-		"description": "Providing comprehensive e-commerce solutions to drive online sales.",
-		"__v": 0,
-		"urlKey": "ecommerce-solutions"
-	},
+
 	{
 		"_id": "66363226f83aa2dee725cf16",
 		"title": "Academic Project Assistance",
 		"description": "Empowering students to excel in their college projects with expert guidance and technical support.",
 		"__v": 0,
 		"urlKey": "academic-project-assistance"
-	},
-	{
-		"_id": "66496500e711a6a97c56e32e",
-		"title": "Website Maintenance",
-		"description": "Expert care for your website, ensuring optimal performance and security.",
-		"__v": 0,
-		"urlKey": "website-maintenance"
-	},
-	{
-		"_id": "66496780e711a6a97c56e335",
-		"title": "Website Development",
-		"description": "Building impactful websites to boost your online presence.",
-		"__v": 0,
-		"urlKey": "website-development"
 	}
 ]

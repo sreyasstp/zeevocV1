@@ -81,11 +81,11 @@ const Header = (props) => {
                             <li><Link to="/extensions" >Extensions</Link></li>
                             <li><Link to="/contact" >Contact</Link></li>
                             <li><Link to="/about" >About</Link></li>
-                            <li>
+                            {/* <li>
                                 <Link to="#" onClick={toggleTheme} className="theme-toggle-icon">
                                     {isDarkTheme ? "Theme " : "Theme "}
                                 </Link>
-                            </li>
+                            </li> */}
                             {location.pathname !== '/login' && (
                                 <li className="has-droupdown">
                                     <Link to="#">
