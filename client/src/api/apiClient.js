@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 // Create an Axios instance
-const API = axios.create({ baseURL: "https://api.zeevocdigital.com/" });
+const API = axios.create({ baseURL: "https://sreyas.onrender.com" });
 
 // Function to determine if the token is a JWT
 const isJWT = (token) => {
